@@ -31,9 +31,14 @@ const main = async () => {
   }));
 
   const idx = builder.build();
+  const results = idx.query(query => {
+    query.term(
+      lunr.tokenizer("アイカツ いちご"),
+      { presence: lunr.Query.presence.REQUIRED }
+    )
+  });
 
-  const results = idx.search("アイカツ").map(item => docs[item.ref]);
-  console.log(results);
+  results.forEach(item => console.log(docs[item.ref]));
 
   // To persist the index:
   // process.stdout.write(JSON.stringify(idx));
