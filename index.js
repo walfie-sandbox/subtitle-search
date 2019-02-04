@@ -2,6 +2,7 @@ const path = require("path");
 const fs = require("fs");
 const parser = require("subtitles-parser");
 const lunr = require("lunr");
+const readline = require("readline");
 
 require("lunr-languages/lunr.stemmer.support.js")(lunr);
 require("lunr-languages/tinyseg")(lunr);
@@ -31,14 +32,28 @@ const main = async () => {
   }));
 
   const idx = builder.build();
-  const results = idx.query(query => {
-    query.term(
-      lunr.tokenizer("アイカツ いちご"),
-      { presence: lunr.Query.presence.REQUIRED }
-    )
+
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
   });
 
-  results.forEach(item => console.log(docs[item.ref]));
+  const ask = () => {
+    rl.question("Enter a search term: ", (input) => {
+      const results = idx.query(query => {
+        query.term(
+          lunr.tokenizer(input),
+          { presence: lunr.Query.presence.REQUIRED }
+        )
+      });
+
+      results.forEach(item => console.log(docs[item.ref]));
+      console.log();
+      ask();
+    });
+  }
+
+  ask();
 
   // To persist the index:
   // process.stdout.write(JSON.stringify(idx));
