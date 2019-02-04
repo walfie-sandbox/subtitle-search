@@ -3,11 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "devDependencies": {
-    "subtitles-parser": "^0.0.2"
-  },
   "dependencies": {
     "lunr": "^2.3.5",
-    "lunr-languages": "^1.0.0"
+    "lunr-languages": "^1.0.0",
+    "subtitles-parser": "^0.0.2"
   }
 }
