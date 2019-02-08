@@ -2,17 +2,17 @@
 # yarn lockfile v1
 
 
-lunr-languages@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/lunr-languages/-/lunr-languages-1.0.0.tgz#830bca2fe864b713ebe13ff33ed48ee06e635723"
-  integrity sha1-gwvKL+hktxPr4T/zPtSO4G5jVyM=
-
-lunr@^2.3.5:
-  version "2.3.5"
-  resolved "https://registry.yarnpkg.com/lunr/-/lunr-2.3.5.tgz#7b510bad57e948dfb99a71fdff00c1bf9171bdda"
-  integrity sha512-EtnfmHsHJTr3u24sito9JctSxej5Ds0SgUD2Lm+qRHyLgM7BGesFlW14eNh1mil0fV5Muh8gf3dBBXzADlUlzQ==
+flexsearch@^0.3.61:
+  version "0.3.61"
+  resolved "https://registry.yarnpkg.com/flexsearch/-/flexsearch-0.3.61.tgz#ca65068bfc81e6738a92b55c1036f6ffb30eaed0"
+  integrity sha512-CrzQDICJggD0X41gV2PR6JiACdqWTQiGRqjyt2EaBLJVmOI0+/KaJC69AIOVjzE2yw3pzzyrHYo+hpxdKUQlpg==
 
 subtitles-parser@^0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/subtitles-parser/-/subtitles-parser-0.0.2.tgz#cf2fcc3e397b1c7f831e1365f6b3ce37d3155194"
   integrity sha1-zy/MPjl7HH+DHhNl9rPON9MVUZQ=
+
+tiny-segmenter@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/tiny-segmenter/-/tiny-segmenter-0.2.0.tgz#4f91115efaa90d1f98b481623b0dcc830a9e1a69"
+  integrity sha1-T5ERXvqpDR+YtIFiOw3MgwqeGmk=
